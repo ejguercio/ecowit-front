@@ -12,6 +12,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="stylesheet" href="assets/css/modal.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -125,8 +126,8 @@
                 <input type="text" name="name" id="name" />
               </div>
               <div class="field half">
-                <label for="email">Correo Electronico</label>
-                <input type="text" name="email" id="email" />
+                <label for="subject">Asunto</label>
+                <input type="text" name="subject" id="subject" />
               </div>
               <div class="field">
                 <label for="message">Mensaje</label>
@@ -134,14 +135,14 @@
                   name="message"
                   id="message"
                   rows="4"
-                  maxlength="5"
+                  maxlength="300"
                   style="resize: none"
                 ></textarea>
               </div>
             </div>
             <ul class="actions">
               <li>
-                <input type="submit" value="Enviar " class="primary" />
+                <input type="submit" value="Enviar " id="sendBtn" />
               </li>
               <li><input type="reset" value="Borrar" /></li>
             </ul>
@@ -168,16 +169,22 @@
       <footer id="footer">
         <p class="copyright">(0353) 154113908</p>
         <p class="copyright">P. Grousac 996 -Villa Maria - CBA</p>
-        <!-- <p class="copyright">
-          &copy; Design: <a href="https://html5up.net">HTML5 UP</a>.
-        </p> -->
       </footer>
     </div>
 
     <!-- BG -->
     <div id="bg"></div>
 
+    <!-- Modal Contact Send-->
+    <div id="modal-contact-send" class="modal">
+      <div class="modal-content">
+        <p id="modal-message"></p>
+        <span class="close-button">CERRAR</span>
+      </div>
+    </div>
+
     <!-- Scripts -->
+    <script type="module" src="assets/js/sender.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
