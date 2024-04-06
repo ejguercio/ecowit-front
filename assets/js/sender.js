@@ -43,6 +43,10 @@ const sendForm = (formData) => {
 
 sendBtn.addEventListener("click", (event) => {
     event.preventDefault();
+    if (name.value == "" || subject.value == "" || message.value == "") {
+        showModal("Todos los campos son obligatorios")
+        return;
+    }
     const formData = {
         name: name.value,
         subject: subject.value,
