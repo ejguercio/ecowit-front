@@ -9,6 +9,7 @@ const closeButton = document.getElementsByClassName("close-button")[0];
 // Cuando el usuario haga click cerrar el modal
 closeButton.onclick = function () {
     modal.style.display = "none";
+    window.location.reload();
 }
 
 // Cuando el usuario haga clic fuera del modal, cerrarlo
